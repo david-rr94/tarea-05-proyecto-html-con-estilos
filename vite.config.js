@@ -6,7 +6,7 @@ const root = import.meta.dirname;
 export default defineConfig({
   // Cambiar esto al nombre de tu repositorio de GitHub para GitHub Pages
   // Ej: base: "/conquer-academy-style/"
-  base: "/conquer-academy-style/",
+  base: "/tarea-05-proyecto-html-con-estilos/",
 
   build: {
     rollupOptions: {
