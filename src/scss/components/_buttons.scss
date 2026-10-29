@@ -1,0 +1,78 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================================
+// BASE BUTTON
+// ============================================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-8;
+  padding: $space-12 $space-24;
+  border-radius: $radius-sm;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color $transition-base,
+    border-color $transition-base,
+    color $transition-base,
+    transform $transition-base;
+  white-space: nowrap;
+
+  &:active {
+    transform: translateY(0) !important;
+  }
+
+  // ─── Variants ────────────────────────────────────────────
+
+  &--primary {
+    background-color: $color-orange;
+    color: $color-white;
+    border-color: $color-orange;
+
+    &:hover {
+      background-color: $color-orange-dark;
+      border-color: $color-orange-dark;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $color-orange;
+    border-color: $color-orange;
+
+    &:hover {
+      background-color: $color-orange;
+      color: $color-white;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: $color-light-gray;
+    border-color: $color-border;
+
+    &:hover {
+      border-color: $color-orange;
+      color: $color-orange;
+    }
+  }
+
+  // ─── Sizes ───────────────────────────────────────────────
+
+  &--sm {
+    padding: $space-8 $space-16;
+    font-size: $font-size-sm;
+  }
+
+  &--lg {
+    padding: $space-16 $space-32;
+    font-size: $font-size-md;
+  }
+}

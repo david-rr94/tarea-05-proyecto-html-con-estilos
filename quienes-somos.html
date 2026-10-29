@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conquer Academy - Conoce nuestro equipo de profesores expertos en tecnología."
+    />
+    <title>Quiénes somos - Conquer Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpeg" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo">Conquer<span>Academy</span></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+        <label for="nav-toggle" class="nav-toggle__label" aria-label="Abrir menú">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </label>
+        <nav class="header__nav" aria-label="Navegación principal">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a href="index.html" class="header__nav-link">Home</a></li>
+            <li class="header__nav-item"><a href="quienes-somos.html" class="header__nav-link header__nav-link--active">Quiénes somos</a></li>
+            <li class="header__nav-item"><a href="cursos.html" class="header__nav-link">Másteres</a></li>
+            <li class="header__nav-item"><a href="blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="contacto.html" class="header__nav-link">Contacto</a></li>
+          </ul>
+          <div class="header__nav-cta">
+            <a href="login.html" class="btn btn--ghost btn--sm">Login</a>
+            <a href="registro.html" class="btn btn--primary btn--sm">Registro</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Hero -->
+      <section class="page-hero">
+        <div class="page-hero__container container">
+          <span class="page-hero__label">Nuestra historia</span>
+          <h1 class="page-hero__title">Quiénes <span class="text-orange">somos</span></h1>
+          <p class="page-hero__subtitle">
+            Un equipo de profesionales apasionados por la tecnología y la
+            formación de la próxima generación de desarrolladores.
+          </p>
+        </div>
+      </section>
+
+      <!-- Misión -->
+      <section class="mission section">
+        <div class="mission__container">
+          <div class="mission__image">
+            <img src="images/profesores.png" alt="Equipo de Conquer Academy" />
+          </div>
+          <div class="mission__content">
+            <span class="hero__label">Nuestra misión</span>
+            <h2 class="section-title">Educación tech <span>accesible para todos</span></h2>
+            <p class="mission__text">
+              Conquer Academy es una academia online especializada en formación
+              tecnológica. Nuestro objetivo es formar a la próxima generación de
+              desarrolladores Full Stack con las habilidades que demanda el
+              mercado laboral actual.
+            </p>
+            <p class="mission__text">
+              Nacimos con la misión de hacer la educación tecnológica accesible
+              para todos, con contenido práctico y actualizado impartido por
+              profesionales en activo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Valores -->
+      <section class="values section section--dark">
+        <div class="values__container">
+          <div class="values__header">
+            <span class="hero__label">Lo que nos guía</span>
+            <h2 class="section-title">Nuestros <span>valores</span></h2>
+          </div>
+          <ul class="values__grid">
+            <li class="values__item">
+              <div class="values__icon" aria-hidden="true">
+                <!-- SVG: estrella / calidad -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="values__title">Calidad educativa</h3>
+              <p class="values__text">
+                Contenido creado y revisado por profesionales en activo de la
+                industria tecnológica.
+              </p>
+            </li>
+            <li class="values__item">
+              <div class="values__icon" aria-hidden="true">
+                <!-- SVG: herramienta / práctica -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="values__title">Aprendizaje práctico</h3>
+              <p class="values__text">
+                Proyectos reales desde el primer día. Aprende haciendo, no solo
+                viendo.
+              </p>
+            </li>
+            <li class="values__item">
+              <div class="values__icon" aria-hidden="true">
+                <!-- SVG: personas / comunidad -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="values__title">Comunidad activa</h3>
+              <p class="values__text">
+                Una comunidad de más de 5.000 estudiantes y profesores siempre
+                dispuestos a ayudar.
+              </p>
+            </li>
+            <li class="values__item">
+              <div class="values__icon" aria-hidden="true">
+                <!-- SVG: flecha arriba / actualización -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="17 11 12 6 7 11"></polyline>
+                  <polyline points="17 18 12 13 7 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="values__title">Siempre actualizado</h3>
+              <p class="values__text">
+                Los contenidos se actualizan constantemente para reflejar las
+                últimas tendencias del mercado.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Equipo -->
+      <section class="team section">
+        <div class="team__container">
+          <div class="team__header">
+            <span class="hero__label">Los mejores profesionales</span>
+            <h2 class="section-title">Nuestro <span>equipo</span></h2>
+          </div>
+          <div class="team__grid">
+            <article class="team__member">
+              <img
+                src="images/bienvenido-saenz.jpg"
+                alt="Bienvenido Sáenz"
+                class="team__photo"
+              />
+              <h3 class="team__name">Bienvenido Sáenz</h3>
+              <span class="team__role">Fundador &amp; Full Stack Developer</span>
+              <p class="team__bio">
+                Desarrollador Full Stack con más de 15 años de experiencia en la
+                industria tecnológica. Fundador y director académico de Conquer
+                Academy.
+              </p>
+            </article>
+
+            <article class="team__member">
+              <img
+                src="images/chema-alonso.jpg"
+                alt="Chema Alonso"
+                class="team__photo"
+              />
+              <h3 class="team__name">Chema Alonso</h3>
+              <span class="team__role">Experto en Ciberseguridad</span>
+              <p class="team__bio">
+                Experto en ciberseguridad y hacking ético con más de 15 años
+                trabajando en seguridad informática para grandes empresas.
+              </p>
+            </article>
+
+            <article class="team__member">
+              <img
+                src="images/carlos-azaustre.jpg"
+                alt="Carlos Azaustre"
+                class="team__photo"
+              />
+              <h3 class="team__name">Carlos Azaustre</h3>
+              <span class="team__role">JavaScript &amp; React Specialist</span>
+              <p class="team__bio">
+                Desarrollador JavaScript y divulgador tecnológico. Especialista
+                en React y Node.js con amplia experiencia en formación online.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Conquer<span>Academy</span></a>
+          <p class="footer__tagline">Formando a los desarrolladores del futuro desde 2020.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Twitter / X" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.732-8.835L2.25 2.25h6.946l4.262 5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h3 class="footer__column-title">Másteres</h3>
+            <a href="curso-fullstack.html" class="footer__link">Full Stack</a>
+            <a href="curso-ia.html" class="footer__link">Inteligencia Artificial</a>
+            <a href="curso-blockchain.html" class="footer__link">Blockchain</a>
+            <a href="curso-ciberseguridad.html" class="footer__link">Ciberseguridad</a>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__column-title">Academia</h3>
+            <a href="quienes-somos.html" class="footer__link">Quiénes somos</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contacto.html" class="footer__link">Contacto</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-container">
+          <p class="footer__copyright">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
+          <a href="aviso-legal.html" class="footer__legal-link">Aviso legal</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

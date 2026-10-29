@@ -1,0 +1,156 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================================
+// FOOTER
+// ============================================================
+
+.footer {
+  background-color: $color-dark;
+  border-top: 1px solid $color-border;
+
+  &__container {
+    @include container;
+    padding-block: $space-48;
+    display: flex;
+    flex-direction: column;
+    gap: $space-32;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  // ─── Brand block ──────────────────────────────────────────
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: $space-12;
+    max-width: 280px;
+  }
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+
+    span {
+      color: $color-orange;
+    }
+  }
+
+  &__tagline {
+    color: $color-gray;
+    font-size: $font-size-sm;
+  }
+
+  // ─── Links ────────────────────────────────────────────────
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $space-32;
+
+    @include tablet {
+      flex-direction: row;
+      gap: $space-64;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: $space-12;
+  }
+
+  &__column-title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-wide;
+    margin-bottom: $space-4;
+  }
+
+  &__link {
+    color: $color-gray;
+    font-size: $font-size-sm;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  // ─── Social ───────────────────────────────────────────────
+
+  &__social {
+    display: flex;
+    gap: $space-16;
+    margin-top: $space-8;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    color: $color-gray;
+    transition: border-color $transition-base, color $transition-base,
+      background-color $transition-base;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      border-color: $color-orange;
+      color: $color-orange;
+      background-color: rgba($color-orange, 0.08);
+    }
+  }
+
+  // ─── Bottom bar ───────────────────────────────────────────
+
+  &__bottom {
+    border-top: 1px solid $color-border;
+
+    &-container {
+      @include container;
+      padding-block: $space-20;
+      display: flex;
+      flex-direction: column;
+      gap: $space-8;
+      align-items: center;
+      text-align: center;
+
+      @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+  }
+
+  &__copyright {
+    color: $color-gray;
+    font-size: $font-size-sm;
+  }
+
+  &__legal-link {
+    color: $color-gray;
+    font-size: $font-size-sm;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}

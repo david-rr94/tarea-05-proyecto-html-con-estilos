@@ -1,0 +1,190 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================================
+// HEADER
+// ============================================================
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: $z-header;
+  background-color: rgba($color-black, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid $color-border;
+
+  &__container {
+    @include flex-between;
+    flex-wrap: wrap;
+    padding: $space-16;
+    position: relative;
+
+    @include tablet {
+      padding: $space-16 $space-32;
+    }
+
+    @include desktop {
+      padding: $space-20 $space-40;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
+
+  // ─── Logo ─────────────────────────────────────────────────
+
+  &__logo {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    letter-spacing: $letter-spacing-tight;
+    z-index: 10;
+
+    span {
+      color: $color-orange;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  // ─── CSS-only Hamburger (checkbox trick) ──────────────────
+
+  .nav-toggle {
+    display: none; // hide the actual checkbox
+  }
+
+  .nav-toggle__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 4px;
+
+    @include tablet {
+      display: none; // hamburger hidden on tablet+
+    }
+  }
+
+  .nav-toggle__bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-white;
+    border-radius: $radius-full;
+    transition: transform $transition-base, opacity $transition-base;
+    transform-origin: center;
+  }
+
+  // Animated X when open
+  .nav-toggle:checked + .nav-toggle__label {
+    .nav-toggle__bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle__bar:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-toggle__bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  // ─── Nav ──────────────────────────────────────────────────
+
+  &__nav {
+    // Mobile: hidden by default, full width dropdown
+    display: none;
+    width: 100%;
+    order: 3;
+    padding-block: $space-16;
+    border-top: 1px solid $color-border;
+
+    @include tablet {
+      // Tablet+: always visible, inline, no border
+      display: flex !important;
+      width: auto;
+      order: 0;
+      padding-block: 0;
+      border-top: none;
+    }
+  }
+
+  // Show nav when checkbox checked (mobile only)
+  .nav-toggle:checked ~ &__nav {
+    display: flex;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+    width: 100%;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      gap: $space-8;
+    }
+  }
+
+  &__nav-item {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    padding: $space-8 $space-12;
+    color: $color-light-gray;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    border-radius: $radius-sm;
+    transition: color $transition-base, background-color $transition-base;
+
+    @include tablet {
+      padding: $space-8 $space-12;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: rgba($color-white, 0.05);
+    }
+
+    // Active page link
+    &--active {
+      color: $color-orange;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  // ─── CTA Buttons in nav ───────────────────────────────────
+
+  &__nav-cta {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+    padding-top: $space-12;
+    border-top: 1px solid $color-border;
+    margin-top: $space-8;
+
+    @include tablet {
+      flex-direction: row;
+      padding-top: 0;
+      border-top: none;
+      margin-top: 0;
+      margin-left: $space-16;
+    }
+  }
+}

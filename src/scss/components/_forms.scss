@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================================
+// FORM ELEMENTS
+// ============================================================
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+}
+
+.form-label {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-light-gray;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background-color: $color-dark-2;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  padding: $space-12 $space-16;
+  color: $color-white;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  transition: border-color $transition-base, box-shadow $transition-base;
+
+  &::placeholder {
+    color: $color-gray;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-orange;
+    box-shadow: 0 0 0 3px rgba($color-orange, 0.15);
+  }
+
+  &:hover:not(:focus) {
+    border-color: #3d3d3d;
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+// File input
+input[type="file"].form-input {
+  padding: $space-8;
+  cursor: pointer;
+}
+
+// Date input
+input[type="date"].form-input {
+  color-scheme: dark;
+}
+
+// ─── Form wrapper ────────────────────────────────────────────
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-20;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: $space-20;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-24;
+
+  legend {
+    padding-inline: $space-8;
+    color: $color-orange;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-wide;
+  }
+}

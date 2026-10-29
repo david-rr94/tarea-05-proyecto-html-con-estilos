@@ -1,0 +1,129 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ============================================================
+// AUTH PAGES — Login & Registro
+// ============================================================
+
+.auth {
+  min-height: calc(100vh - 65px); // subtract header height
+  @include flex-center;
+  padding: $space-48 $space-16;
+  background: radial-gradient(
+    ellipse at center,
+    rgba($color-orange, 0.04) 0%,
+    $color-black 70%
+  );
+
+  &__container {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  &__card {
+    background-color: $color-dark;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $space-40;
+
+    @include tablet {
+      padding: $space-48;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: $space-40;
+  }
+
+  &__logo {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    margin-bottom: $space-8;
+
+    span {
+      color: $color-orange;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-white;
+    margin-bottom: $space-8;
+  }
+
+  &__subtitle {
+    color: $color-gray;
+    font-size: $font-size-sm;
+  }
+
+  // ─── Form ────────────────────────────────────────────────
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-40;
+  }
+
+  &__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: $space-20;
+    position: relative;
+
+    legend {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing-wide;
+      color: $color-orange;
+      margin-bottom: $space-4;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-16;
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__alt-link {
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $color-gray;
+    margin-top: $space-24;
+
+    a {
+      color: $color-orange;
+      font-weight: $font-weight-semibold;
+      transition: color $transition-base;
+
+      &:hover {
+        color: $color-orange-dark;
+      }
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: $space-16;
+    color: $color-gray;
+    font-size: $font-size-sm;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: $color-border;
+    }
+  }
+}
