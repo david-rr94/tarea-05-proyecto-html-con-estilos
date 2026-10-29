@@ -1,0 +1,20 @@
+# Dependencias
+node_modules/
+
+# Producción
+dist/
+dist-ssr/
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema y Editores
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.sw?
